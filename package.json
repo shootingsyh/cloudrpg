@@ -1,0 +1,41 @@
+{
+  "name": "cloudrpg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shootingsyh/cloudrpg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shootingsyh/cloudrpg/issues"
+  },
+  "homepage": "https://github.com/shootingsyh/cloudrpg#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "ejs": "^2.5.7",
+    "flexlayout-react": "^0.2.5",
+    "koa": "^2.4.1",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.3",
+    "koa2": "^2.0.0-alpha.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2"
+  }
+}
