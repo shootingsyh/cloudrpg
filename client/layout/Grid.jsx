@@ -2,6 +2,7 @@ import React from 'react';
 
 import FlexLayout from "flexlayout-react";
 import style from "../../node_modules/flexlayout-react/style/dark.css"; 
+import {Icon} from "antd";
 var json = {
 	global: {
     "tabSetEnableDrag": false,
@@ -75,7 +76,8 @@ var json = {
                           "children": [
                             {
                               "type": "tab",
-                              "name": "layer"
+                              "name": "layer",
+                              "component": "ant_icon",
                             }
                           ]
                         },
@@ -115,7 +117,9 @@ class Grid extends React.Component {
           }
 
           return <FlexLayout.Layout model={model} factory={this.factory.bind(this)}/>;
-      }
+        } else if (component === "ant_icon") {
+          return <Icon type="link" />;
+        }
 
     }
 
