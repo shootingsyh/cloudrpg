@@ -2,7 +2,13 @@ import React from 'react';
 
 import FlexLayout from "flexlayout-react";
 import style from "../../node_modules/flexlayout-react/style/dark.css"; 
-import {Icon} from "antd";
+import TilesetMenu from "../ui/TilesetMenu";
+import AddTilesetDialog from "../ui/AddTilesetDialog";
+import TilesetViews from "../ui/TilesetViews";
+
+import UIStore from "../store/UIStore";
+import ModelStore from "../store/ModelStore";
+
 var json = {
 	global: {
     "tabSetEnableDrag": false,
@@ -118,7 +124,14 @@ class Grid extends React.Component {
 
           return <FlexLayout.Layout model={model} factory={this.factory.bind(this)}/>;
         } else if (component === "ant_icon") {
-          return <Icon type="link" />;
+          return <div>
+            <TilesetMenu store={UIStore}/>
+            <TilesetViews 
+              model_store={ModelStore.tilesets} 
+              ui_store={UIStore.tilesets}
+            />
+            <AddTilesetDialog ui_store={UIStore.dialogs.tileset_dialog} model_store={ModelStore.tilesets}/>
+          </div>;
         }
 
     }
