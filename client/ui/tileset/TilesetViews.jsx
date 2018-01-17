@@ -27,6 +27,7 @@ class TilesetViews extends React.Component {
               activeKey={this.props.ui_store.active_key}
               type="editable-card"
               onEdit={this.onEdit}
+              hideAdd={true}
             >
               {this.props.model_store.map(
                   (tile, key) => <TabPane tab={tile.name} key={key.toString()} closable={true}>{tile.name}</TabPane>

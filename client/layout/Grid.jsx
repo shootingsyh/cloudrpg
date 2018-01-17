@@ -2,9 +2,9 @@ import React from 'react';
 
 import FlexLayout from "flexlayout-react";
 import style from "../../node_modules/flexlayout-react/style/dark.css"; 
-import TilesetMenu from "../ui/TilesetMenu";
-import AddTilesetDialog from "../ui/AddTilesetDialog";
-import TilesetViews from "../ui/TilesetViews";
+import TilesetMenu from "../ui/tileset/TilesetMenu";
+import AddTilesetDialog from "../ui/tileset/AddTilesetDialog";
+import TilesetViews from "../ui/tileset/TilesetViews";
 
 import UIStore from "../store/UIStore";
 import ModelStore from "../store/ModelStore";
@@ -130,7 +130,7 @@ class Grid extends React.Component {
               model_store={ModelStore.tilesets} 
               ui_store={UIStore.tilesets}
             />
-            <AddTilesetDialog ui_store={UIStore.dialogs.tileset_dialog} model_store={ModelStore.tilesets}/>
+            <AddTilesetDialog ui_store={UIStore} model_store={ModelStore.tilesets}/>
           </div>;
         }
 
