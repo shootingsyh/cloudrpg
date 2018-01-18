@@ -2,6 +2,7 @@ import { Tabs } from 'antd';
 import React from 'react';
 import _ from 'lodash'
 import {observer} from 'mobx-react';
+import TilesetView from './TilesetView';
 
 const TabPane = Tabs.TabPane;
 
@@ -30,7 +31,9 @@ class TilesetViews extends React.Component {
               hideAdd={true}
             >
               {this.props.model_store.map(
-                  (tile, key) => <TabPane tab={tile.name} key={key.toString()} closable={true}>{tile.name}</TabPane>
+                  (tile, key) => <TabPane tab={tile.name} key={key.toString()} closable={true}>
+                    <TilesetView name={tile.name} />
+                  </TabPane>
               )}
             </Tabs>
           ) : null;

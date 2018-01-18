@@ -9,6 +9,7 @@ app.use(views(path.join(__dirname, './views'), {
 }));
 
 app.use(serve(path.join(__dirname, '/build')));
+app.use(serve(path.join(__dirname, 'server/static')));
 
 app.use( async ( ctx ) => {
   let title = 'hello koa2'
