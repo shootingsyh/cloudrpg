@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Input} from 'antd';
+import { Modal, Input, InputNumber} from 'antd';
 import {observer} from 'mobx-react';
 import Tileset from '../../model/Tileset';
 
@@ -33,6 +33,15 @@ export default observer(class AddTilesetDialog extends React.Component {
     onNameChange = (e) => {
         this.props.ui_store.dialogs.tileset_dialog.name = e.target.value;
     }
+    onPicChange = (e) => {
+        this.props.ui_store.dialogs.tileset_dialog.pic = e.target.value;
+    }
+    onWidthChange = (e) => {
+        this.props.ui_store.dialogs.tileset_dialog.width = e;
+    }
+    onHeightChange = (e) => {
+        this.props.ui_store.dialogs.tileset_dialog.height = e;
+    }
     render() {
         return <Modal
             title="Add Tileset"
@@ -44,6 +53,21 @@ export default observer(class AddTilesetDialog extends React.Component {
                 placeholder="Tileset name" 
                 value={this.props.ui_store.dialogs.tileset_dialog.name} 
                 onChange={this.onNameChange}
+            />
+            <Input 
+                placeholder="Tileset pic" 
+                value={this.props.ui_store.dialogs.tileset_dialog.pic} 
+                onChange={this.onPicChange}
+            />
+            <InputNumber 
+                placeholder="Tileset width" 
+                value={this.props.ui_store.dialogs.tileset_dialog.width} 
+                onChange={this.onWidthChange}
+            />
+            <InputNumber 
+                placeholder="Tileset height" 
+                value={this.props.ui_store.dialogs.tileset_dialog.height} 
+                onChange={this.onHeightChange}
             />
             </Modal>;
     }

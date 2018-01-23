@@ -31,8 +31,8 @@ class TilesetViews extends React.Component {
               hideAdd={true}
             >
               {this.props.model_store.map(
-                  (tile, key) => <TabPane tab={tile.name} key={key.toString()} closable={true}>
-                    <TilesetView name={tile.name} />
+                  (tileset, key) => <TabPane tab={tileset.name} key={key.toString()} closable={true}>
+                    <TilesetView tileset={tileset} ui_store={this.props.ui_store}/>
                   </TabPane>
               )}
             </Tabs>

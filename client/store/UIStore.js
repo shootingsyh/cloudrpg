@@ -12,10 +12,8 @@ class UIStore {
     }
     @observable tilesets = {
         active_key: null,
-        hover: false,
-        select: false,
-        hover_on_idx: 0,
-        select_idx: 0,
+        select_x: null,
+        select_y: null,
     }
 }
 

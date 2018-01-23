@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FlexLayout from "flexlayout-react";
-import style from "../../node_modules/flexlayout-react/style/dark.css"; 
+import style from "../../node_modules/flexlayout-react/style/light.css"; 
 import TilesetMenu from "../ui/tileset/TilesetMenu";
 import AddTilesetDialog from "../ui/tileset/AddTilesetDialog";
 import TilesetViews from "../ui/tileset/TilesetViews";
